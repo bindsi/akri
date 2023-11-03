@@ -7,3 +7,7 @@ rustup default 1.68.1
 # Install k3d
 curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
 k3d cluster create akri-cluster --servers 1
+export AKRI_HELM_CRICTL_CONFIGURATION="--set kubernetesDistro=microk8s"
+helm repo add akri-helm-charts https://project-akri.github.io/akri/
+helm install akri akri-helm-charts/akri \
+  $AKRI_HELM_CRICTL_CONFIGURATION \
