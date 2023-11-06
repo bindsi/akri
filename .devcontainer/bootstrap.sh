@@ -11,6 +11,7 @@ export AKRI_HELM_CRICTL_CONFIGURATION="--set kubernetesDistro=k3s"
 helm repo add akri-helm-charts https://project-akri.github.io/akri/
 helm install akri akri-helm-charts/akri $AKRI_HELM_CRICTL_CONFIGURATION
 
+
 # Install go-lang
 sudo apt-get update
 sudo apt-get install -y golang-go
