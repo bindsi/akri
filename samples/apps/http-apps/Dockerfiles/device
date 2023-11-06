@@ -1,0 +1,15 @@
+FROM golang:1.15 as build
+WORKDIR /http-extensibility
+COPY go.mod .
+RUN go mod download
+COPY . .
+RUN GOOS=linux \
+    go build -a -installsuffix cgo \
+    -o /bin/device \
+    github.com/project-akri/akri/http-extensibility/cmd/device
+FROM gcr.io/distroless/base-debian10
+COPY --from=build /bin/device /
+USER 999
+EXPOSE 8080
+ENTRYPOINT ["/device"]
+CMD ["--path=/","--path=/sensor","--device=device:8000","--device=device:8001"]

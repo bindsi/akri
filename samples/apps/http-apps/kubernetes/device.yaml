@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: device
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      id: akri-http-device
+  template:
+    metadata:
+      labels:
+        id: akri-http-device
+      name: device
+    spec:
+      imagePullSecrets:
+        - name: crPullSecret
+      containers:
+        - name: device
+          image: ghcr.io/bindsi/http-apps-device:v1
+          imagePullPolicy: Always
+          args:
+            - --path=/
+            - --device=http://device-1:8080
+            - --device=http://device-2:8080
+            - --device=http://device-3:8080
+            - --device=http://device-4:8080
+            - --device=http://device-5:8080
+            - --device=http://device-6:8080
+            - --device=http://device-7:8080
+            - --device=http://device-8:8080
+            - --device=http://device-9:8080
+          ports:
+            - name: http
+              containerPort: 8080
