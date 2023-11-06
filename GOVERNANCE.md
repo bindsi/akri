@@ -8,7 +8,10 @@ Everyone who interacts with the project must abide by our [Code of Conduct](./CO
 
 ## Legal
 
-The Akri project is in the [CNCF Sandbox](https://www.cncf.io/sandbox-projects/). ⛱
+The Akri project is in t
+
+
+he [CNCF Sandbox](https://www.cncf.io/sandbox-projects/). ⛱
 
 ## Roles
 
