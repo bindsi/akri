@@ -14,3 +14,4 @@ helm install akri akri-helm-charts/akri $AKRI_HELM_CRICTL_CONFIGURATION
 # Install go-lang
 sudo apt-get update
 sudo apt-get install -y golang-go
+
