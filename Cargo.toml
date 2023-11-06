@@ -15,6 +15,7 @@ members = [
     "discovery-handlers/onvif", 
     "discovery-handlers/opcua", 
     "discovery-handlers/udev", 
+    "discovery-handlers/kepserverex",
     "discovery-handler-modules/debug-echo-discovery-handler", 
     "discovery-handler-modules/onvif-discovery-handler", 
     "discovery-handler-modules/opcua-discovery-handler", 
