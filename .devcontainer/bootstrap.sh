@@ -1,3 +1,4 @@
+#!/bin/bash
 ./build/setup.sh
 
 sudo curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain=1.70
